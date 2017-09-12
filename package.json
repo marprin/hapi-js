@@ -1,0 +1,24 @@
+{
+  "name": "kong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marprin Hennes Muchri (marprin93@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "good": "^7.3.0",
+    "good-console": "^6.4.0",
+    "good-squeeze": "^5.0.2",
+    "handlebars": "^4.0.10",
+    "hapi": "^16.5.2",
+    "hapi-auth-basic": "^4.2.0",
+    "hoek": "^4.2.0",
+    "inert": "^4.2.1",
+    "joi": "^10.6.0",
+    "vision": "^4.1.1"
+  }
+}
