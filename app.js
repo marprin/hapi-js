@@ -4,9 +4,13 @@ const Hapi = require('hapi');
 const Good = require('good');
 
 const server = new Hapi.Server();
+require('dotenv').load();
+
+const env = process.env;
+
 server.connection({
-	port: 7500,
-	host: 'localhost',
+	port: env.APP_PORT,
+	host: env.APP_HOST,
 });
 
 server.route({
@@ -48,11 +52,11 @@ server.register([{
 	if(err) {
 		throw err;
 	}
+});
 
-	server.start( err => {
-		if (err) {
-			throw err;
-		}
-		console.log(`Server running at: ${server.info.uri}`);
-	});
-})
+server.start( err => {
+	if (err) {
+		throw err;
+	}
+	console.log(`Server running at: ${server.info.uri}`);
+});
